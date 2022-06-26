@@ -1,6 +1,6 @@
 
 export enum Menu{
-    Khmerfood,
+    Khmerfood ,
     Chinesfood,
     Thaifood
 }
