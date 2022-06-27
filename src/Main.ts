@@ -29,9 +29,11 @@ tables.customerTable(savouert);
 
 // menu 
  let menu1 = new Menu(1,'pizza',20);
- let menu2 = new MenuItem();
- menu2.addMenu(menu1);
- reterants.addMeunItem(menu2);
+ let menu2 = new Menu(2,'pizza',30);
+ let menuItem = new MenuItem();
+ menuItem.addMenu(menu1);
+ menuItem.addMenu(menu2);
+ reterants.addMeunItem(menuItem);
 
-
-console.log(reterants);
+ 
+console.log(menuItem);
