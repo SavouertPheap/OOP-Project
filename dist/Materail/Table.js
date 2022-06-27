@@ -6,6 +6,13 @@ var Table = /** @class */ (function () {
         this.tableId = tableId;
         this.customer = [];
     }
+    Table.prototype.customerTable = function () {
+        var newcustomer = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            newcustomer[_i] = arguments[_i];
+        }
+        this.customer = this.customer.concat(newcustomer);
+    };
     return Table;
 }());
 exports.Table = Table;
