@@ -1,8 +1,8 @@
 import { Menu } from "./Menu";
 
 export class MenuItem{
-    menu:Menu[];
+    menu:Menu[]=[];
     addMenu(menus:Menu){
-        // return this.menu.push(menus);
+        this.menu.push(menus);
     }
 }
