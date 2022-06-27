@@ -22,7 +22,9 @@ var tables = new Table_1.Table(1);
 tables.customerTable(savouert);
 // menu 
 var menu1 = new Menu_1.Menu(1, 'pizza', 20);
-var menu2 = new Menuitem_1.MenuItem();
-menu2.addMenu(menu1);
-reterants.addMeunItem(menu2);
-console.log(reterants);
+var menu2 = new Menu_1.Menu(2, 'pizza', 30);
+var menuItem = new Menuitem_1.MenuItem();
+menuItem.addMenu(menu1);
+menuItem.addMenu(menu2);
+reterants.addMeunItem(menuItem);
+console.log(menuItem);
