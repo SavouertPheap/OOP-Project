@@ -6,6 +6,9 @@ var Table = /** @class */ (function () {
         this.tableId = tableId;
         this.customer = [];
     }
+    Table.prototype.push = function (table1) {
+        throw new Error("Method not implemented.");
+    };
     Table.prototype.customerTable = function () {
         var newcustomer = [];
         for (var _i = 0; _i < arguments.length; _i++) {

@@ -6,6 +6,9 @@ var Chef = /** @class */ (function () {
         this.name = name;
         this.order = [];
     }
+    Chef.prototype.addOrder = function (order) {
+        this.order.push(order);
+    };
     return Chef;
 }());
 exports.Chef = Chef;
