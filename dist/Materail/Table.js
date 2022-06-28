@@ -13,6 +13,14 @@ var Table = /** @class */ (function () {
         }
         this.customer = this.customer.concat(newcustomer);
     };
+    Table.prototype.isEqual = function (tableId) {
+        return tableId == this.tableId;
+    };
+    Table.prototype.customerTableSit = function () {
+        if (this.isEqual(this.tableId)) {
+            return this.customer;
+        }
+    };
     return Table;
 }());
 exports.Table = Table;

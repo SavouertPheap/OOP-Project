@@ -20,6 +20,10 @@ reterants.people.addWaiter(phearun);
 // table1
 var tables = new Table_1.Table(1);
 tables.customerTable(savouert);
+var tables2 = new Table_1.Table(4);
+tables2.customerTable(sophiem);
+// console.log(tables.isEqual(1));
+console.log(tables2.customerTableSit());
 // menu 
 var menu1 = new Menu_1.Menu(1, 'pizza', 20);
 var menu2 = new Menu_1.Menu(2, 'pizza', 30);

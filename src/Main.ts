@@ -3,7 +3,6 @@ import { Customer } from "./Customer";
 import { Gender } from "./staff/Gender";
 import { Waiter } from "./staff/Waiter";
 import { Resturant } from "./ResturantManagerment/Resturant";
-import {HumanManager} from "./staff/HurmanManager";
 import { Menu } from "./ResturantManagerment/kitchen/Menu";
 import { MenuItem } from "./ResturantManagerment/kitchen/Menuitem";
 
@@ -26,6 +25,11 @@ reterants.people.addWaiter(phearun);
 // table1
 let tables = new Table(1);
 tables.customerTable(savouert);
+let tables2 = new Table(4);
+tables2.customerTable(sophiem);
+console.log(tables.customerTableSit());
+
+
 
 // menu 
  let menu1 = new Menu(1,'pizza',20);
@@ -35,5 +39,4 @@ tables.customerTable(savouert);
  menuItem.addMenu(menu2);
  reterants.addMeunItem(menuItem);
 
- 
 console.log(menuItem);
