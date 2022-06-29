@@ -36,6 +36,8 @@ table2.customerTable(sophiem);
 console.log(table1.customerTableSit());
 
 
+
+
 // menu 
 let menu1 = new Menu(1,'pizza',20);
 let menu2 = new Menu(2,'beaf',35);

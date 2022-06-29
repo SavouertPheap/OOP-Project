@@ -28,6 +28,7 @@ var table2 = new Table_1.Table(2);
 table1.customerTable(savouert);
 table2.customerTable(sophiem);
 console.log(table1.customerTableSit());
+console.log(table2.getTable());
 // menu 
 var menu1 = new Menu_1.Menu(1, 'pizza', 20);
 var menu2 = new Menu_1.Menu(2, 'beaf', 35);

@@ -3,10 +3,8 @@ import { Customer } from "../Customer";
 
 
 export class Table{
-    push(table1: Table) {
-        throw new Error("Method not implemented.");
-    }
-    private customer:Customer[]=[]
+    private tables:Table[]=[];
+    private customer:Customer[]=[];
     constructor(private tableId:number){}
 
     customerTable(...newcustomer:Customer[]){
@@ -20,4 +18,6 @@ export class Table{
             return this.customer;
         }
     }
+    
+
 }

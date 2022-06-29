@@ -24,6 +24,9 @@ var Table = /** @class */ (function () {
             return this.customer;
         }
     };
+    Table.prototype.getTable = function () {
+        return this.tableId;
+    };
     return Table;
 }());
 exports.Table = Table;
