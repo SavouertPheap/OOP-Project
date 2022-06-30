@@ -1,64 +1,47 @@
-import { Table } from "./Materail/Table";
 import { Customer } from "./Customer";
-import { Gender } from "./staff/Gender";
-import { Waiter } from "./staff/Waiter";
-import { Resturant } from "./ResturantManagerment/Resturant";
-import { Menu } from "./ResturantManagerment/kitchen/Menu";
-import { MenuItem } from "./ResturantManagerment/kitchen/Menuitem";
-import { Order } from "./OrderManagerment/Order";
-import { Chef } from "./staff/Chef";
+import { Menu } from "./Menu";
+import { MenuItem } from "./MenuItem";
+import { Order } from "./Order";
+import { Table } from "./Table";
+import { Waiter } from "./Waiter";
 
 
-// resturant
+let customer1 = new Customer(1,'savouert');
+let customer2 = new Customer(2,"sopheim");
 
-let reterants = new Resturant('Best-Food','Phnom penh city');
-
-// customer that came in resterant
-let sophiem = new Customer('Sophiem',Gender.Female);
-let savouert = new Customer('Savouert',Gender.Female);
-reterants.people.addCustomer(savouert);
+// console.log(customer1.getCustomerId());
 
 
-// waiter in resterant 
-let phearun = new Waiter(sophiem);
-phearun.proviceservice(savouert,sophiem);
-reterants.people.addWaiter(phearun);
-
-let mengyi = new Waiter(sophiem);
-mengyi.proviceservice(savouert,sophiem)
-reterants.people.addWaiter(mengyi);
-
-// table1
 let table1 = new Table(1);
 let table2 = new Table(2);
-table1.customerTable(savouert);
-table2.customerTable(sophiem);
-console.log(table1.customerTableSit());
 
 
-
-
-// menu 
-let menu1 = new Menu(1,'pizza',20);
-let menu2 = new Menu(2,'beaf',35);
-let menu3 = new Menu(3,'crap',30);
-let menu4 = new Menu(4,'frag',10);
-
-let menuItem = new MenuItem();
-menuItem.addFood(menu1,menu2,menu3,menu4);
-reterants.addMeunItem(menuItem);
-
-
-// order
 let order1 = new Order();
-order1.addTable(table1);
-order1.addMenuItem(menuItem)
+//  order1.orderFood(['Pizz',"ddd"]);
 
-// chef
-let meta = new Chef('meta');
-let sophal = new Chef('phal');
-meta.addOrder(order1);
+let waiter1 = new Waiter();
+waiter1.CreateOrder(1,1,order1);
 
-reterants.people.addChef(meta);
 
-console.log(reterants);
+order1.addCustomer(customer1);
+
+
+
+let menu1 = new MenuItem(1,'ddd',15);
+let menu2 = new MenuItem(2,'dd',15);
+
+order1.addMenuItem(menu1,menu2);
+// order1.isMenuEqual(order1)
+let orders = new Menu(['ddd','dd1']);
+order1.addFoodCusOrder(orders)
+
+// console.log(order1);
+// console.log(order1.checkInMenu(orders));
+// checkInMenu
+
+// console.log(order1.isEquals(orders,menu1));
+console.log(order1.getPriceMenuItem(menu1));
+
+
+
+// console.log(waiter1.isEqual(1));/

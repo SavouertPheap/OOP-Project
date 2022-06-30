@@ -1,10 +1,10 @@
-import { Customer } from "../Customer";
-
+import { Customer } from "./Customer";
 
 
 export class Table{
-    private tables:Table[]=[];
+    
     private customer:Customer[]=[];
+    private maximumTable:number = 4;
     constructor(private tableId:number){}
 
     customerTable(...newcustomer:Customer[]){
@@ -18,6 +18,4 @@ export class Table{
             return this.customer;
         }
     }
-    
-
 }

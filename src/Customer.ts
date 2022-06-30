@@ -1,10 +1,7 @@
-import { Table } from "./Materail/Table";
-import { Gender } from "./staff/Gender";
-import { Person } from "./staff/Person";
 
-export class Customer extends Person{
-    constructor (name:string,gender:Gender){
-        super(name,gender);
-    } 
-    
+export class Customer{
+    constructor(private customerId :number,private name:string){}
+    getCustomerId(){
+        return this.customerId;
+    }
 }
