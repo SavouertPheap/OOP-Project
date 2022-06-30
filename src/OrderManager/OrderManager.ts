@@ -1,17 +1,12 @@
-import { Customer } from "./Customer";
+import { Customer } from "../HumanManager/Customer";
 import { Menu } from "./Menu";
 import { MenuItem } from "./MenuItem";
 
 
 export class Order{
     private customers:Customer[]=[]
-    menuItem:MenuItem[]=[];
     cusOrderFood: Menu[]=[]
 
-
-    addMenuItem(...menuItems:MenuItem[]){
-        this.menuItem = this.menuItem.concat(menuItems);
-    }
     getAllOrder(){
         return this;
     }
@@ -48,22 +43,4 @@ export class Order{
         }
     
     }
-
-    checkMenuItem(MenuItem:MenuItem){
-        for( let item of this.menuItem){
-            return item.getName();
-        }
-    }
-    isEquals(menu:Menu,menuItem:MenuItem):boolean | undefined{
-        return this.checkInMenu(menu) == this.checkMenuItem(menuItem)
-    }
-
-    getPriceMenuItem(menuItem:MenuItem){
-        let prices = 0;
-        return prices += menuItem.getPrice();
-    }
-    // sumPrice():number{
-    //     let sum = this.getPriceMenuItem(men);
-
-    // }
 }

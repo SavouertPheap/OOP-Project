@@ -1,5 +1,5 @@
 import { Customer } from "./Customer";
-import { Order } from "./Order";
+import { Order } from "../OrderManager/OrderManager";
 
 
 
@@ -23,18 +23,6 @@ export class Waiter{
     getOrder(){
         return this.orders;
     }
-    // addCustomer(customer:Customer){
-    //     this.customers.push(customer);
-    // }
 
-    // isEqual(customerId:number):boolean{
-    //     let message = false;
-    //     for(let customer of this.customers){
-    //         if(customer.getCustomerId() == customerId){
-    //             message = true
-    //         }
-    //     }
-    //     return message;
-    // }
 
 }

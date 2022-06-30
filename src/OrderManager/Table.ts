@@ -1,4 +1,4 @@
-import { Customer } from "./Customer";
+import { Customer } from "../HumanManager/Customer";
 
 
 export class Table{
